@@ -16,10 +16,10 @@ const SKILLS = [
 ];
 
 const SOCIAL_LINKS = [
-  { icon: <LinkedInIcon />, label: 'LinkedIn', href: '#' },
-  { icon: <GitHubIcon />, label: 'GitHub', href: '#' },
+  { icon: <LinkedInIcon />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/koyiljon/' },
+  { icon: <GitHubIcon />, label: 'GitHub', href: 'https://github.com/koyiljon-s' },
   { icon: <DescriptionIcon />, label: 'Resume', href: '#' },
-  { icon: <EmailIcon />, label: 'Gmail', href: '#' },
+  { icon: <EmailIcon />, label: 'Gmail', href: 'mailto:sultonalieyvqoyiljon@gmail.com' },
 ];
 
 export default function HeroSection() {
@@ -65,7 +65,7 @@ export default function HeroSection() {
           <Chip
             key={skill}
             label={skill}
-            variant={isDark ? 'outlined' : 'filled'}
+            variant="outlined"
             sx={{
               fontFamily: '"Inter", sans-serif',
               fontWeight: 600,
@@ -73,19 +73,19 @@ export default function HeroSection() {
               py: 3,
               px: 0.5,
               borderRadius: '10px',
-              borderWidth: 2,
-              borderColor: isDark ? 'rgba(96, 165, 250, 0.5)' : 'primary.main',
-              backgroundColor: isDark ? 'rgba(30, 58, 95, 0.3)' : 'rgba(156, 163, 175, 0.2)',
-              color: isDark ? '#60A5FA' : 'white',
+              borderWidth: 1.5,
+              borderColor: isDark ? 'rgba(96, 165, 250, 0.4)' : 'rgba(37, 99, 235, 0.3)',
+              backgroundColor: isDark ? 'rgba(30, 58, 95, 0.25)' : 'rgba(37, 99, 235, 0.05)',
+              color: isDark ? '#60A5FA' : '#374151',
               '& .MuiChip-label': { px: 2.5 },
               transition: 'all 0.3s ease',
               '&:hover': {
-                backgroundColor: isDark ? 'rgba(59, 130, 246, 0.2)' : 'primary.dark',
-                borderColor: 'primary.dark',
+                backgroundColor: isDark ? 'rgba(59, 130, 246, 0.15)' : 'rgba(37, 99, 235, 0.1)',
+                borderColor: isDark ? '#60A5FA' : '#2563EB',
                 transform: 'translateY(-2px)',
                 boxShadow: isDark
-                  ? '0 4px 12px rgba(59, 130, 246, 0.3)'
-                  : '0 4px 12px rgba(37, 99, 235, 0.3)',
+                  ? '0 4px 12px rgba(59, 130, 246, 0.25)'
+                  : '0 4px 12px rgba(37, 99, 235, 0.15)',
               },
             }}
           />
