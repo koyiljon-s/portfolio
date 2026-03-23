@@ -91,7 +91,7 @@ export default function ProjectsSection() {
     <Box sx={{ minHeight: '100vh', bgcolor: colors.container, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
       <Box sx={{ py: { xs: 4, md: 6 }, bgcolor: colors.section1 }}>
         <Container maxWidth="lg">
-          <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
+          <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' } }}>
             {projects[0].title}
           </Typography>
           <Stack direction="row" alignItems="center" gap={1} sx={{ mb: 2 }}>
@@ -106,7 +106,7 @@ export default function ProjectsSection() {
           </Stack>
           <Typography sx={{ fontWeight: 600, color: colors.label, mb: 1, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>Overview:</Typography>
           <Typography sx={{ color: colors.overview, fontWeight: 600, mb: 2, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[0].overview}</Typography>
-          <Typography sx={{ color: colors.text, fontSize: 18, lineHeight: 1.8, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[0].description}</Typography>
+          <Typography sx={{ color: colors.text, fontSize: { xs: 14, sm: 16, md: 18 }, lineHeight: 1.8, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[0].description}</Typography>
           {projects[0].link && (
             <Box component="a" href={projects[0].link} target="_blank" rel="noopener noreferrer" sx={{ display: 'inline-block', mt: 2, color: colors.overview, textDecoration: 'underline', fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
               {projects[0].linkText}
@@ -117,7 +117,7 @@ export default function ProjectsSection() {
 
       <Box sx={{ py: { xs: 4, md: 6 }, bgcolor: colors.section2 }}>
         <Container maxWidth="lg">
-          <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
+          <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' } }}>
             {projects[1].title}
           </Typography>
           <Stack direction="row" alignItems="center" gap={1} sx={{ mb: 2 }}>
@@ -132,7 +132,7 @@ export default function ProjectsSection() {
           </Stack>
           <Typography sx={{ fontWeight: 600, color: colors.label, mb: 1, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>Overview:</Typography>
           <Typography sx={{ color: colors.overview, fontWeight: 600, mb: 2, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[1].overview}</Typography>
-          <Typography sx={{ color: colors.text, fontSize: 18, lineHeight: 1.8, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[1].description}</Typography>
+          <Typography sx={{ color: colors.text, fontSize: { xs: 14, sm: 16, md: 18 }, lineHeight: 1.8, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[1].description}</Typography>
           {projects[1].link && (
             <Box component="a" href={projects[1].link} target="_blank" rel="noopener noreferrer" sx={{ display: 'inline-block', mt: 2, color: colors.overview, textDecoration: 'underline', fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
               {projects[1].linkText}
@@ -143,7 +143,7 @@ export default function ProjectsSection() {
 
       <Box sx={{ py: { xs: 4, md: 6 }, bgcolor: colors.section1 }}>
         <Container maxWidth="lg">
-          <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
+          <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' } }}>
             {projects[2].title}
           </Typography>
           <Stack direction="row" alignItems="center" gap={1} sx={{ mb: 2 }}>
@@ -158,7 +158,7 @@ export default function ProjectsSection() {
           </Stack>
           <Typography sx={{ fontWeight: 600, color: colors.label, mb: 1, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>Overview:</Typography>
           <Typography sx={{ color: colors.overview, fontWeight: 600, mb: 2, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[2].overview}</Typography>
-          <Typography sx={{ color: colors.text, fontSize: 18, lineHeight: 1.8, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[2].description}</Typography>
+          <Typography sx={{ color: colors.text, fontSize: { xs: 14, sm: 16, md: 18 }, lineHeight: 1.8, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[2].description}</Typography>
           {projects[2].link && (
             <Box component="a" href={projects[2].link} target="_blank" rel="noopener noreferrer" sx={{ display: 'inline-block', mt: 2, color: colors.overview, textDecoration: 'underline', fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
               {projects[2].linkText}
@@ -169,7 +169,7 @@ export default function ProjectsSection() {
 
       <Box sx={{ py: { xs: 4, md: 6 }, bgcolor: colors.section2 }}>
         <Container maxWidth="lg">
-          <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
+          <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' } }}>
             {projects[3].title}
           </Typography>
           <Stack direction="row" alignItems="center" gap={1} sx={{ mb: 2 }}>
@@ -184,7 +184,7 @@ export default function ProjectsSection() {
           </Stack>
           <Typography sx={{ fontWeight: 600, color: colors.label, mb: 1, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>Overview:</Typography>
           <Typography sx={{ color: colors.overview, fontWeight: 600, mb: 2, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[3].overview}</Typography>
-          <Typography sx={{ color: colors.text, fontSize: 18, lineHeight: 1.8, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[3].description}</Typography>
+          <Typography sx={{ color: colors.text, fontSize: { xs: 14, sm: 16, md: 18 }, lineHeight: 1.8, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>{projects[3].description}</Typography>
           {projects[3].link && (
             <Box component="a" href={projects[3].link} target="_blank" rel="noopener noreferrer" sx={{ display: 'inline-block', mt: 2, color: colors.overview, textDecoration: 'underline', fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
               {projects[3].linkText}
