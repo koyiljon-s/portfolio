@@ -90,7 +90,7 @@ export default function ProjectsSection() {
   return (
     <Box sx={{ minHeight: '100vh', bgcolor: colors.container, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
       <Box sx={{ py: { xs: 4, md: 6 }, bgcolor: colors.section1 }}>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" disableGutters>
           <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' } }}>
             {projects[0].title}
           </Typography>
@@ -116,7 +116,7 @@ export default function ProjectsSection() {
       </Box>
 
       <Box sx={{ py: { xs: 4, md: 6 }, bgcolor: colors.section2 }}>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" disableGutters>
           <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' } }}>
             {projects[1].title}
           </Typography>
@@ -142,7 +142,7 @@ export default function ProjectsSection() {
       </Box>
 
       <Box sx={{ py: { xs: 4, md: 6 }, bgcolor: colors.section1 }}>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" disableGutters>
           <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' } }}>
             {projects[2].title}
           </Typography>
@@ -168,7 +168,7 @@ export default function ProjectsSection() {
       </Box>
 
       <Box sx={{ py: { xs: 4, md: 6 }, bgcolor: colors.section2 }}>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" disableGutters>
           <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: colors.text, fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' } }}>
             {projects[3].title}
           </Typography>

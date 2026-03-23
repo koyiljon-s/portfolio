@@ -1,8 +1,10 @@
 'use client';
 
-import { AppBar, Toolbar, Button, Box, IconButton } from '@mui/material';
+import { useState } from 'react';
+import { AppBar, Toolbar, Button, Box, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText, useMediaQuery, useTheme } from '@mui/material';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import MenuIcon from '@mui/icons-material/Menu';
 import { useThemeMode } from './ThemeProvider';
 
 const navItems = [
@@ -13,12 +15,43 @@ const navItems = [
 
 export default function Navbar() {
   const { mode, toggleTheme } = useThemeMode();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item.label} disablePadding>
+            <ListItemButton href={item.href} sx={{ textAlign: 'center' }}>
+              <ListItemText primary={item.label} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
   return (
     <AppBar position="sticky" elevation={0}>
       <Toolbar>
+        {isMobile && (
+          <IconButton
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
+        )}
         <Box sx={{ display: 'flex', gap: 4 }}>
-          {navItems.map((item) => (
+          {!isMobile && navItems.map((item) => (
             <Button
               key={item.label}
               href={item.href}
@@ -66,6 +99,18 @@ export default function Navbar() {
           </IconButton>
         </Box>
       </Toolbar>
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{ keepMounted: true }}
+        sx={{
+          display: { xs: 'block', md: 'none' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 250 },
+        }}
+      >
+        {drawer}
+      </Drawer>
     </AppBar>
   );
 }
