@@ -3,14 +3,15 @@
 import { Box, Typography, Grid, useTheme, Card } from '@mui/material';
 import { useState, useEffect } from 'react';
 
-const PHOTOS = ['/portfolio.jpg', '/portfolio-2.png'];
+const PHOTOS = ['/portfolio.jg', '/portfolio-2.pg'];
 
 const ABOUT_TEXT = {
   greeting: "Wellcome to my website!",
   description: `My name is Koyiljon Sultonaliev. I am a student at Woosong University(Daejeon) majoring in AI and Big Data, and I am working as a Software Engineer.
 
-As an experienced Software Engineer, I have developed backend services, full-stack applications and machine learning solutions. 
+As an experienced Software Engineer, I have developed backend services, full-stack applications and machine learning solutions with a focus on turning AI insights into real-world, high-impact software. 
 
+I’m particularly passionate about making intelligent systems that are not just powerful, but practical and efficient.
 `,
 };
 
