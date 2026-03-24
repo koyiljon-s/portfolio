@@ -73,7 +73,7 @@ export default function HeroSection() {
               py: 3,
               px: 0.5,
               borderRadius: '10px',
-              borderWidth: 1.5,
+              borderWidth: 2,
               borderColor: isDark ? 'rgba(96, 165, 250, 0.4)' : 'rgba(37, 99, 235, 0.3)',
               backgroundColor: isDark ? 'rgba(30, 58, 95, 0.25)' : 'rgba(37, 99, 235, 0.05)',
               color: isDark ? '#60A5FA' : '#374151',

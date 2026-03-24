@@ -3,7 +3,7 @@
 import { Box, Typography, Grid, useTheme, Card } from '@mui/material';
 import { useState, useEffect } from 'react';
 
-const PHOTOS = ['/portfolio.jg', '/portfolio-2.pg'];
+const PHOTOS = ['/portfolio.jpg', '/portfolio-2.png'];
 
 const ABOUT_TEXT = {
   greeting: "Wellcome to my website!",
