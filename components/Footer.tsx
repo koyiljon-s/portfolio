@@ -9,7 +9,7 @@ import EmailIcon from '@mui/icons-material/Email';
 const SOCIAL_LINKS = [
   { icon: <LinkedInIcon />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/koyiljon/' },
   { icon: <GitHubIcon />, label: 'GitHub', href: 'https://github.com/koyiljon-s' },
-  { icon: <DescriptionIcon />, label: 'Resume', href: '#' },
+  { icon: <DescriptionIcon />, label: 'Resume', href: 'https://docs.google.com/document/d/1hxtVUIIxzvtGxMF9gqz_yjwsgXSrkERa0SUTsBV4wmc/edit?usp=sharing' },
   { icon: <EmailIcon />, label: 'Gmail', href: 'mailto:sultonalieyvqoyiljon@gmail.com' },
 ];
 
