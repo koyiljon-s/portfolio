@@ -10,6 +10,7 @@ export default function Footer() {
         textAlign: "center",
         py: 4,
         borderTop: "1px solid #333",
+   
       }}
     >
       <Container maxWidth="lg">

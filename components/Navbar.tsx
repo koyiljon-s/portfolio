@@ -35,7 +35,12 @@ export default function Navbar() {
       }}
     >
       <Container maxWidth="lg">
-        <Toolbar disableGutters sx={{ minHeight: 72, gap: 0 }}>
+        <Toolbar disableGutters 
+         sx={{ 
+          gap: 0,
+          py: 2,
+         }}
+        >
           <Typography
             variant="h6"
             component={Link}
@@ -47,7 +52,7 @@ export default function Navbar() {
               letterSpacing: "-0.03em"
              }}
           >
-            Koyiljon&apos;s I/O
+            Name&apos;s I/O
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <Button 
