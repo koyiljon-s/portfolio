@@ -15,7 +15,7 @@ export default function Contact() {
         <Typography
           variant="h4"
           sx={{
-            fontWeight: 700,
+            fontWeight: 500,
             background:
              "linear-gradient(90deg, #00C98D 0%, #00D9B5 50%, #42D9BC 100%)",
             WebkitBackgroundClip: "text",
@@ -31,7 +31,7 @@ export default function Contact() {
           variant="h6"
           sx={{
             color: "#fff",
-            fontWeight: 600,
+            fontWeight: 400,
             maxWidth: "700px",
             mx: "auto",
           }}

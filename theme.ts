@@ -5,7 +5,7 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   cssVariables: true,
   typography: {
-    fontFamily: "var(--font-manrope), sans-serif",
+    fontFamily: "var(--font-geist), sans-serif",
     fontWeightLight: 200,
     fontWeightRegular: 200,
     fontWeightMedium: 500,
