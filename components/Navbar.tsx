@@ -17,7 +17,16 @@ export default function Navbar() {
       elevation={0}
       sx={{
         backdropFilter: "blur(18px)",
-        backgroundColor: "#171717",
+        backgroundColor: "transparent",
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: "2px",
+          background: "linear-gradient(90deg, #6366F1 0%, #A855F7 50%, #F59E0B 100%), linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%)",
+        },
       }}
     >
       <Container maxWidth="xl">
@@ -33,7 +42,7 @@ export default function Navbar() {
             href="/"
             sx={{ 
               textDecoration: "none",
-              color: "#00e887",
+              color: "#fff",
               fontWeight: 400, 
               letterSpacing: "-0.03em"
              }}
