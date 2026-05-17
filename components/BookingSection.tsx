@@ -69,7 +69,7 @@ export default function Contact() {
             sx={{
               color: "fff",
               fontWeight: 500,
-              fontSize: "0.87rem",
+              fontSize: "0.92rem",
             }}
           >
             * Or reach out at{" "}
