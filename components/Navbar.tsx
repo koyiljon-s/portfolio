@@ -50,12 +50,11 @@ export default function Navbar() {
             Name&apos;s I/O
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
+
           <Button
             color="inherit"
-            component="a"
-            href="https://scaleworks.tech"
-            target="_blank"
-            rel="noopener noreferrer"
+            component={Link}
+            href="/blog"
             sx={{
               "&:hover": {
                 backgroundColor: "#242426",
@@ -68,23 +67,7 @@ export default function Navbar() {
               fontSize: "0.95rem",
             }}
           >
-            Scaleworks
-          </Button>
-          <Button 
-            color="inherit"
-            sx={{
-              "&:hover": {
-                backgroundColor: "#242426",
-                color: "#00def2",
-              },
-              py: 1,
-              px: 2,
-              borderRadius: 1,
-              fontWeight: 300,
-              fontSize: "0.95rem",
-            }}
-          > 
-           Blog 
+            Blog
           </Button>
           <Button
             color="inherit"
