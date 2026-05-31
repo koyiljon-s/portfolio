@@ -8,6 +8,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+export const dynamic = "force-static";
+
 function getBlogPosts() {
   const blogDir = path.join(process.cwd(), "content/blog");
   const files = fs.readdirSync(blogDir);
