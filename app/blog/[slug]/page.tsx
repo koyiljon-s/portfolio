@@ -44,7 +44,7 @@ export default async function BlogPostPage({ params }: Props) {
       <Navbar />
       <Box component="main" sx={{ flex: 1, py: 10 }}>
         <Container maxWidth="sm">
-          <BlogPostContent post={post} />
+          <BlogPostContent post={post} slug={slug} />
         </Container>
       </Box>
       <Footer />

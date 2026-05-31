@@ -4,9 +4,12 @@ import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import BlogEmailSubscription from "@/components/BlogEmailSubscription";
+import BlogViewCounter from "@/components/BlogViewCounter";
 
 export interface BlogPost {
   title: string;
@@ -18,6 +21,7 @@ export interface BlogPost {
 
 interface Props {
   post: BlogPost;
+  slug: string;
 }
 
 function ReadingProgress() {
@@ -58,7 +62,7 @@ function ReadingProgress() {
   );
 }
 
-export default function BlogPostContent({ post }: Props) {
+export default function BlogPostContent({ post, slug }: Props) {
   return (
     <>
       <ReadingProgress />
@@ -67,39 +71,54 @@ export default function BlogPostContent({ post }: Props) {
         <Typography
           variant="body2"
           sx={{
-            color: "#4f95f7",
+            color: "#63d685",
             mb: 4,
-            fontWeight: 500,
+            fontWeight: 600,
+            fontSize: "0.80rem",
             display: "inline-flex",
             alignItems: "center",
             gap: 0.5,
             opacity: 0.85,
             "&:hover": { opacity: 1 },
             transition: "opacity 0.15s",
+            textTransform: "uppercase",
           }}
         >
-          &larr; Back to blog
+          <ArrowBackIcon sx={{ fontSize: 16 }} />
+          <span>Back to blog</span>
         </Typography>
       </Link>
 
       {/* Date */}
-      <Typography
-        variant="body2"
+      <Box
         sx={{
-          color: "text.disabled",
-          mb: 1.5,
-          fontWeight: 400,
-          letterSpacing: "0.03em",
-          fontSize: "0.8125rem",
-          textTransform: "uppercase",
+          mb: 3,
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          gap: 1.25,
+          justifyContent: "space-between",
         }}
       >
-        {new Date(post.date).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
-      </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            color: "text.disabled",
+            fontWeight: 400,
+            letterSpacing: "0.03em",
+            fontSize: "0.8125rem",
+            textTransform: "uppercase",
+          }}
+        >
+          {new Date(post.date).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </Typography>
+
+        <BlogViewCounter slug={slug} />
+      </Box>
 
       {/* Title */}
       <Typography
@@ -305,6 +324,8 @@ export default function BlogPostContent({ post }: Props) {
       >
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </Box>
+
+      <BlogEmailSubscription />
     </>
   );
 }
