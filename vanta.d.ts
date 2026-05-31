@@ -4,3 +4,4 @@ declare module 'vanta' {
     };
     export default Vanta;
   }
+  
