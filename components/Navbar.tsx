@@ -25,7 +25,7 @@ export default function Navbar() {
           left: 0,
           right: 0,
           height: "2px",
-          background: "linear-gradient(90deg, #6366F1 0%, #A855F7 50%, #F59E0B 100%), linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%)",
+          background: "linear-gradient(90deg, #85c2ff 0%, #ada1ff 20%, #fa907f 40%, #ffe770 60%, #b5de7c 80%, #6d89b3 100%)",
         },
       }}
     >
@@ -47,7 +47,7 @@ export default function Navbar() {
               letterSpacing: "-0.03em"
              }}
           >
-            Name&apos;s I/O
+            Koyiljon&apos;s I/O
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
 
