@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
-import Script from "next/script";
 import theme from "@/theme";
 import "./globals.css";
 
@@ -25,12 +24,6 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </AppRouterCacheProvider>
-        <Script
-          defer
-          src="https://cloud.umami.is/script.js"
-          data-website-id="a6b39597-5839-462f-9474-2449c030889f"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

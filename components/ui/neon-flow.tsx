@@ -17,14 +17,30 @@ interface TubesBackgroundProps {
   enableClickInteraction?: boolean;
 }
 
+interface TubesApp {
+  tubes: {
+    setColors: (colors: string[]) => void;
+    setLightsColors: (colors: string[]) => void;
+  };
+}
+
+interface TubesOptions {
+  tubes: {
+    colors: string[];
+    lights: {
+      intensity: number;
+      colors: string[];
+    };
+  };
+}
+
 export function TubesBackground({
   children,
   className,
   enableClickInteraction = true,
 }: TubesBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const tubesRef = useRef<any>(null);
+  const tubesRef = useRef<TubesApp | null>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -36,7 +52,7 @@ export function TubesBackground({
       try {
         const loadTubes = new Function("u", "return import(u)") as (
           url: string
-        ) => Promise<{ default: (canvas: HTMLCanvasElement, options: unknown) => any }>;
+        ) => Promise<{ default: (canvas: HTMLCanvasElement, options: TubesOptions) => TubesApp }>;
         const tubesModule = await loadTubes(
           "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js"
         );
