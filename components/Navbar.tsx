@@ -54,24 +54,6 @@ export default function Navbar() {
           <Button
             color="inherit"
             component={Link}
-            href="/blog"
-            sx={{
-              "&:hover": {
-                backgroundColor: "#242426",
-                color: "#00def2",
-              },
-              py: 1,
-              px: 2,
-              borderRadius: 1,
-              fontWeight: 300,
-              fontSize: "0.95rem",
-            }}
-          >
-            Blog
-          </Button>
-          <Button
-            color="inherit"
-            component={Link}
             href="/about"
             sx={{
               "&:hover": {

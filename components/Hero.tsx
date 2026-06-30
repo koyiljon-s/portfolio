@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { MousePointer2, ArrowRight } from "lucide-react";
 import { TubesBackground } from "@/components/ui/neon-flow";
 
 export default function Hero() {
@@ -16,7 +15,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-xl md:text-8xl font-bold tracking-tighter text-white drop-shadow-[0_0_20px_rgba(0,0,0,1)] select-none">
+            <h1 className="text-xl md:text-8xl font-semibold tracking-tighter text-white drop-shadow-[0_0_20px_rgba(0,0,0,1)] select-none">
               Koyiljon Sultonaliev
             </h1>
           </motion.div>

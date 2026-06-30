@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 const randomColors = (count: number) =>
@@ -23,7 +23,6 @@ export function TubesBackground({
   enableClickInteraction = true,
 }: TubesBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const tubesRef = useRef<any>(null);
 
@@ -35,11 +34,13 @@ export function TubesBackground({
       if (!canvasRef.current) return;
 
       try {
-        // @ts-expect-error CDN module has no types
-        const module = await import(
-          /* webpackIgnore: true */ "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js"
+        const loadTubes = new Function("u", "return import(u)") as (
+          url: string
+        ) => Promise<{ default: (canvas: HTMLCanvasElement, options: unknown) => any }>;
+        const tubesModule = await loadTubes(
+          "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js"
         );
-        const TubesCursor = module.default;
+        const TubesCursor = tubesModule.default;
 
         if (!mounted) return;
 
@@ -54,7 +55,6 @@ export function TubesBackground({
         });
 
         tubesRef.current = app;
-        setIsLoaded(true);
 
         cleanup = () => {
           // library manages its own resize listeners
