@@ -8,8 +8,6 @@ export default function Footer() {
       component="footer"
       sx={{
         textAlign: "center",
-        py: 4,
-        borderTop: "1px solid #333",
    
       }}
     >
@@ -17,10 +15,16 @@ export default function Footer() {
         <Typography 
           variant="body2" 
           sx={{ 
+            py: 2,
+            borderTopLeftRadius: 8,
+            borderTopRightRadius: 8,
+            borderBottomLeftRadius: 0,
+            borderBottomRightRadius: 0,
+            bgcolor: "#d3ff4f",
             fontWeight: 500,
-            fontSize: "0.9rem",
+            fontSize: "1rem",
             letterSpacing: "-0.01em",
-            color: "fff",
+            color: "#003811",
            }}
         >
           © {new Date().getFullYear()} koyiljon.com

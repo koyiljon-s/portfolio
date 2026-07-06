@@ -8,7 +8,7 @@ const theme = createTheme({
     dark: true,
   },
   typography: {
-    fontFamily: "var(--font-geist), sans-serif",
+    fontFamily: "var(--font-fira-code), monospace",
     fontWeightLight: 200,
     fontWeightRegular: 200,
     fontWeightMedium: 500,

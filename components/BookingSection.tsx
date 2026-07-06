@@ -17,7 +17,7 @@ export default function Contact() {
           sx={{
             fontWeight: 500,
             background:
-             "#fff",
+             "#1a1a1a",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             display: "inline-block",
@@ -30,7 +30,7 @@ export default function Contact() {
         <Typography
           variant="h6"
           sx={{
-            color: "#7e8187",
+            color: "#1a1a1a",
             fontWeight: 400,
             maxWidth: "700px",
             mx: "auto",
@@ -67,17 +67,17 @@ export default function Contact() {
         >
           <Typography
             sx={{
-              color: "fff",
+              color: "#1a1a1a",
               fontWeight: 500,
-              fontSize: "0.92rem",
+              fontSize: "1.02rem",
             }}
           >
-            * Or reach out at{" "}
+            Or reach out at{" "}
             <Box
               component="a"
               href="mailto:mail@koyiljon.com"
               sx={{
-                color: "#fff",
+                color: "#000",
                 textDecoration: "none",
                 fontWeight: 500,
                 transition: "opacity 0.2s ease",

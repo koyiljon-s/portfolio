@@ -29,7 +29,7 @@ export default function Navbar() {
         },
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Toolbar disableGutters 
          sx={{ 
           gap: 1,
@@ -37,34 +37,30 @@ export default function Navbar() {
          }}
         >
           <Typography
-            variant="h6"
+            variant="h5"
             component={Link}
             href="/"
             sx={{ 
               textDecoration: "none",
-              color: "#fff",
-              fontWeight: 400, 
+              color: "#003811",
+              fontWeight: 600, 
               letterSpacing: "-0.03em"
              }}
           >
-            Koyiljon&apos;s I/O
+            KOYILJON&apos;s I/O
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
 
           <Button
-            color="inherit"
             component={Link}
             href="/about"
             sx={{
-              "&:hover": {
-                backgroundColor: "#242426",
-                color: "#00def2",
-              },
               py: 1,
               px: 2,
               borderRadius: 1,
-              fontWeight: 300,
+              fontWeight: 400,
               fontSize: "0.95rem",
+              color: "#003b0e",
             }}
           >
             About me
@@ -81,13 +77,13 @@ export default function Navbar() {
               py: 0.8,
               px: 2.5,
               borderRadius: 1,
-              background: "#fff",
-              color: "#000",
-              fontWeight: 300,
+              background: "#ccff33",
+              color: "#003b0e",
+              fontWeight: 400,
               fontSize: "0.95rem",
             }}
           >
-            Contact
+            CONTACT
           </Button>
         </Toolbar>
       </Container>
