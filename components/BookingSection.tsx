@@ -9,6 +9,7 @@ export default function Contact() {
       sx={{
         py: 12,
         textAlign: "center",
+        bgcolor: "#000000"
       }}
     >
       <Container maxWidth="lg">
@@ -17,7 +18,7 @@ export default function Contact() {
           sx={{
             fontWeight: 500,
             background:
-             "#1a1a1a",
+             "#fff",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             display: "inline-block",
@@ -30,7 +31,7 @@ export default function Contact() {
         <Typography
           variant="h6"
           sx={{
-            color: "#1a1a1a",
+            color: "#cccccc",
             fontWeight: 400,
             maxWidth: "700px",
             mx: "auto",
@@ -67,7 +68,7 @@ export default function Contact() {
         >
           <Typography
             sx={{
-              color: "#1a1a1a",
+              color: "#fff",
               fontWeight: 500,
               fontSize: "1.02rem",
             }}
@@ -77,7 +78,7 @@ export default function Contact() {
               component="a"
               href="mailto:mail@koyiljon.com"
               sx={{
-                color: "#000",
+                color: "#cccccc",
                 textDecoration: "none",
                 fontWeight: 500,
                 transition: "opacity 0.2s ease",

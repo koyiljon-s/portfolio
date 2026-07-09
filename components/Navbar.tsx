@@ -17,23 +17,14 @@ export default function Navbar() {
       elevation={0}
       sx={{
         backdropFilter: "blur(18px)",
-        backgroundColor: "transparent",
-        "&::before": {
-          content: '""',
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: "2px",
-          background: "linear-gradient(90deg, #85c2ff 0%, #ada1ff 20%, #fa907f 40%, #ffe770 60%, #b5de7c 80%, #6d89b3 100%)",
-        },
+        backgroundColor: "#000000",
       }}
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters 
          sx={{ 
           gap: 1,
-          py: 2,
+          py: 0.5,
          }}
         >
           <Typography
@@ -42,8 +33,8 @@ export default function Navbar() {
             href="/"
             sx={{ 
               textDecoration: "none",
-              color: "#003811",
-              fontWeight: 600, 
+              color: "#fff",
+              fontWeight: 500, 
               letterSpacing: "-0.03em"
              }}
           >
@@ -55,12 +46,14 @@ export default function Navbar() {
             component={Link}
             href="/about"
             sx={{
-              py: 1,
+              py: 0.8,
               px: 2,
-              borderRadius: 1,
+              mr: 1,
+              border: "1px solid #404040",
+              borderRadius: 0,
               fontWeight: 400,
               fontSize: "0.95rem",
-              color: "#003b0e",
+              color: "#fff",
             }}
           >
             About me
@@ -75,15 +68,14 @@ export default function Navbar() {
                 
               },
               py: 0.8,
-              px: 2.5,
-              borderRadius: 1,
-              background: "#ccff33",
+              borderRadius: 0,
+              background: "#deeb4d",
               color: "#003b0e",
-              fontWeight: 400,
+              fontWeight: 500,
               fontSize: "0.95rem",
             }}
           >
-            CONTACT
+            CONTACT 
           </Button>
         </Toolbar>
       </Container>
