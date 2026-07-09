@@ -20,7 +20,7 @@ export default function Navbar() {
         backgroundColor: "#000000",
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Toolbar disableGutters 
          sx={{ 
           gap: 1,

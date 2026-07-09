@@ -1,6 +1,5 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 export default function Hero() {
@@ -12,11 +11,11 @@ export default function Hero() {
         bgcolor: "#fff",
         display: "flex",
         alignItems: "center",
-        
+        backgroundColor: "#000",
       }}
     >
       <Container
-        maxWidth="lg"
+        maxWidth="xl"
         sx={{
           width: "100%",
           display: "flex",
@@ -54,88 +53,49 @@ export default function Hero() {
               <Typography
                 variant="h1"
                 sx={{
-                  color: "#000",
+                  color: "#fff",
                   fontWeight: 600,
                   letterSpacing: "-0.04em",
                   fontSize: { xs: "2.5rem", md: "4.5rem", lg: "3.5rem" },
                   lineHeight: 0.95,
-                  bgcolor: "#d2ff4a",
+                  bgcolor: "#000",
                   height: "340px",
-                  borderTopLeftRadius: 12,
-                  borderTopRightRadius: 0,
-                  borderBottomLeftRadius: 0,
-                  borderBottomRightRadius: 0,
                   p: 3,
+                  border: "1px solid #404040",
                 }}
               >
-                Koyiljon Sultonaliev
+                <Box component="span" sx={{ color: "#deeb4d" }}>
+                  K
+                </Box>
+                oyiljon
+                <br />
+                <Box component="span" sx={{ color: "#deeb4d" }}>
+                  S
+                </Box>
+                ultonaliev
+                <Box
+                  component="div"
+                  sx={{
+                    mt: 18,
+                    color: "#deeb4d",
+                    fontWeight: 400,
+                    letterSpacing: "-0.04em",
+                    fontSize: { xs: "1.5rem", md: "2.75rem", lg: "1.5rem" },
+                    lineHeight: 1,
+                  }}
+                >
+                  Software Engineer
+                </Box>
               </Typography>
             </Box>
-
-            <Box
-              sx={{
-                display: "flex",
-                gap: 1.5,
-                px: 3,
-                py: 1.5,
-                flexWrap: "wrap",
-                bgcolor: "#d2ff4a",
-                borderTopLeftRadius: 0,
-                borderTopRightRadius: 0,
-                borderBottomLeftRadius: 12,
-                borderBottomRightRadius: 12,
-              }}
-            >
-              <Button
-                type="button"
-                sx={{
-                  borderRadius: 999,
-                  px: 3.5,
-                  py: 1,
-                  minHeight: 44,
-                  backgroundColor: "#003b0e",
-                  color: "#ccff33",
-                  textTransform: "uppercase",
-                  fontWeight: 400,
-                  letterSpacing: "-0.02em",
-                  "&:hover": {
-                    backgroundColor: "#1e293b",
-                  },
-                }}
-              >
-                Contributions
-              </Button>
-              <Button
-                type="button"
-                sx={{
-                  borderRadius: 999,
-                  px: 3.5,
-                  py: 1,
-                  minHeight: 44,
-                  border: "1px solid #0f172a",
-                  color: "#003b0e",
-                  textTransform: "uppercase",
-                  fontWeight: 400,
-                  letterSpacing: "-0.02em",
-                  backgroundColor: "transparent",
-                  "&:hover": {
-                    backgroundColor: "rgba(15, 23, 42, 0.06)",
-                    borderColor: "#1e293b",
-                  },
-                }}
-              >
-                Projects
-              </Button>
-            </Box>
           </Box>
-          <Typography
-            variant="h2"
+          <Box
             sx={{
               alignSelf: "start",
               display: "flex",
               alignItems: "flex-end",
               justifyContent: "flex-end",
-              color: "#000",
+              color: "#deeb4d",
               fontWeight: 400,
               letterSpacing: "-0.04em",
               fontSize: { xs: "1.5rem", md: "2.75rem", lg: "1.5rem" },
@@ -144,13 +104,10 @@ export default function Hero() {
               p: 3,
               width: "100%",
               boxSizing: "border-box",
-              bgcolor: "#d2ff4a",
-              borderTopRightRadius: 12,
-              borderBottomRightRadius: 12,
+              bgcolor: "#000",
+              border: "1px solid #404040",
             }}
-          >
-            Software Engineer
-          </Typography>
+          />
         </Box>
       </Container>
     </Box>
