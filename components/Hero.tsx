@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import Dithering from "@/components/ui/dithering";
 
 export default function Hero() {
   return (
@@ -89,22 +90,17 @@ export default function Hero() {
               </Typography>
             </Box>
           </Box>
-          <Box
-            sx={{
-              alignSelf: "start",
-              display: "flex",
-              alignItems: "flex-end",
-              justifyContent: "flex-end",
-              color: "#deeb4d",
-              fontWeight: 400,
-              letterSpacing: "-0.04em",
-              fontSize: { xs: "1.5rem", md: "2.75rem", lg: "1.5rem" },
-              lineHeight: 1,
+          <Dithering
+            colorBack="#000000"
+            colorFront="#deeb4d"
+            shape="warp"
+            type="4x4"
+            size={2}
+            speed={0.5}
+            style={{
               height: "340px",
-              p: 3,
               width: "100%",
               boxSizing: "border-box",
-              bgcolor: "#000",
               border: "1px solid #404040",
             }}
           />
