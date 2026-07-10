@@ -1,6 +1,10 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
+import GitHub from "@mui/icons-material/GitHub";
+import LinkedIn from "@mui/icons-material/LinkedIn";
+import Instagram from "@mui/icons-material/Instagram";
 import Dithering from "@/components/ui/dithering";
 
 export default function Hero() {
@@ -77,7 +81,7 @@ export default function Hero() {
                 <Box
                   component="div"
                   sx={{
-                    mt: 18,
+                    mt: 14,
                     color: "#deeb4d",
                     fontWeight: 400,
                     letterSpacing: "-0.04em",
@@ -86,6 +90,37 @@ export default function Hero() {
                   }}
                 >
                   Software Engineer
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1.5,
+                  }}
+                >
+                  <Link
+                    href="https://github.com/koyiljon-s"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{ color: "#deeb4d", "&:hover": { color: "#fff" } }}
+                  >
+                    <GitHub sx={{ fontSize: 28 }} />
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/in/koyiljon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{ color: "#deeb4d", "&:hover": { color: "#fff" } }}
+                  >
+                    <LinkedIn sx={{ fontSize: 28 }} />
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/koyiljon7/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{ color: "#deeb4d", "&:hover": { color: "#fff" } }}
+                  >
+                    <Instagram sx={{ fontSize: 28 }} />
+                  </Link>
                 </Box>
               </Typography>
             </Box>
