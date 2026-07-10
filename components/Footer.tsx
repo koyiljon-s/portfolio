@@ -8,7 +8,7 @@ export default function Footer() {
       component="footer"
       sx={{
         textAlign: "center",
-        bgcolor: "#000000",
+        bgcolor: "#1a1a1a",
         borderTop: "1px solid #404040",
       }}
     >

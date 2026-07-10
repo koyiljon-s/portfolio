@@ -17,7 +17,7 @@ export default function Navbar() {
       elevation={0}
       sx={{
         backdropFilter: "blur(18px)",
-        backgroundColor: "#000000",
+        backgroundColor: "transparent",
       }}
     >
       <Container maxWidth="xl">
