@@ -1,15 +1,26 @@
 import type { Metadata } from "next";
-import { Fira_Code } from "next/font/google";
+import localFont from "next/font/local";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
 import theme from "@/theme";
 import "./globals.css";
 
-const firaCode = Fira_Code({
-  subsets: ["latin"],
+const figtree = localFont({
+  src: [
+    {
+      path: "../public/fonts/figtree/variable/figtree-latin-wght-normal.woff2",
+      weight: "300 900",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/figtree/variable/figtree-latin-wght-italic.woff2",
+      weight: "300 900",
+      style: "italic",
+    },
+  ],
   display: "swap",
-  variable: "--font-fira-code",
+  variable: "--font-figtree",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${firaCode.variable} h-full antialiased`}>
+    <html lang="en" className={`${figtree.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>

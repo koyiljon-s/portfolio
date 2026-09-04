@@ -1,18 +1,12 @@
-import Box from "@mui/material/Box";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Achievements from "@/components/Achievements";
-import Contributions from "@/components/Contributions";
+import AirlockHero from "@/components/ui/airlock-spaceship-hero";
 
 export default function Home() {
   return (
-    <Box sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-      <Navbar />
-      <Hero />
-      <Achievements />
- 
-      <Footer />
-    </Box>
+    <main className="min-h-screen bg-[#05070d] text-[#f2f4f8]">
+      <AirlockHero
+        title="THE AIRLOCK OPENS"
+        tagline="Hi, I am Koyiljon and I am a Software Engineer"
+      />
+    </main>
   );
 }
