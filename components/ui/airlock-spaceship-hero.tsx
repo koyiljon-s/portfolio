@@ -223,7 +223,7 @@ export default function AirlockHero({
         engageLock()
       }
     }
-    const onLoadedData = () => {
+    const updateDuration = () => {
       duration = video!.duration || 0
       if (reduceMotion) {
         target = shown = 1
@@ -232,7 +232,12 @@ export default function AirlockHero({
       }
     }
 
-    video.addEventListener("loadeddata", onLoadedData)
+    // Production deployments can serve the video from cache, allowing
+    // metadata to be available before the effect finishes wiring listeners.
+    // Read it immediately and also handle both normal loading events.
+    if (video.readyState >= 1) updateDuration()
+    video.addEventListener("loadedmetadata", updateDuration)
+    video.addEventListener("loadeddata", updateDuration)
     video.addEventListener("seeked", onSeeked)
     if (!reduceMotion) {
       if (window.scrollY <= section.offsetTop + 1) engageLock()
@@ -250,7 +255,8 @@ export default function AirlockHero({
     }
 
     return () => {
-      video.removeEventListener("loadeddata", onLoadedData)
+      video.removeEventListener("loadedmetadata", updateDuration)
+      video.removeEventListener("loadeddata", updateDuration)
       video.removeEventListener("seeked", onSeeked)
       window.removeEventListener("wheel", onWheel)
       window.removeEventListener("touchstart", onTouchStart)
