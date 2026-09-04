@@ -1,146 +1,53 @@
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import GitHub from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import Instagram from "@mui/icons-material/Instagram";
-import Dithering from "@/components/ui/dithering";
+import LatticeBackground from "@/components/ui/lattice-background";
 
 export default function Hero() {
   return (
-    <Box
-      component="section"
-      sx={{
-        width: "100%",
-        bgcolor: "#fff",
-        display: "flex",
-        alignItems: "center",
-        backgroundColor: "#000",
-      }}
+    <LatticeBackground
+      title=""
+      subtitle=""
+      description=""
+      className="min-h-screen"
     >
-      <Container
-        maxWidth="xl"
-        sx={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          px: { xs: 3, md: 3 },
-          py: { xs: 6, md: 6},
-        }}
-      >
-        <Box
-          sx={{
-            display: "grid",
-            width: "100%",
-            alignItems: "center",
-            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-            gap: 0,
-          }}
+      <h1 className="text-center text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-white sm:text-7xl md:text-9xl">
+        <span className="text-[#deeb4d]">K</span>oyiljon
+        <br />
+        <span className="text-[#deeb4d]">S</span>ultonaliyev
+      </h1>
+      <p className="mt-8 text-xl font-normal tracking-[-0.04em] text-[#deeb4d] sm:text-2xl md:text-3xl">
+        Software Engineer
+      </p>
+      <div className="pointer-events-auto mt-6 flex gap-5">
+        <a
+          href="https://github.com/koyiljon-s"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="text-[#deeb4d] transition-colors hover:text-white"
         >
-          <Box
-            sx={{
-              minWidth: 0,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              gap: 0,
-            }}
-          >
-            <Box
-              sx={{
-                width: "100%",
-                textAlign: "left",
-                bgcolor: "#d2ff4a",
-                borderRadius: 2,
-              }}
-            >
-              <Typography
-                variant="h1"
-                sx={{
-                  color: "#fff",
-                  fontWeight: 600,
-                  letterSpacing: "-0.04em",
-                  fontSize: { xs: "2.5rem", md: "4.5rem", lg: "3.5rem" },
-                  lineHeight: 0.95,
-                  bgcolor: "#000",
-                  height: "340px",
-                  p: 3,
-                  border: "1px solid #404040",
-                }}
-              >
-                <Box component="span" sx={{ color: "#deeb4d" }}>
-                  K
-                </Box>
-                oyiljon
-                <br />
-                <Box component="span" sx={{ color: "#deeb4d" }}>
-                  S
-                </Box>
-                ultonaliev
-                <Box
-                  component="div"
-                  sx={{
-                    mt: 14,
-                    color: "#deeb4d",
-                    fontWeight: 400,
-                    letterSpacing: "-0.04em",
-                    fontSize: { xs: "1.5rem", md: "2.75rem", lg: "1.5rem" },
-                    lineHeight: 1,
-                  }}
-                >
-                  Software Engineer
-                </Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    gap: 1.5,
-                  }}
-                >
-                  <Link
-                    href="https://github.com/koyiljon-s"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{ color: "#deeb4d", "&:hover": { color: "#fff" } }}
-                  >
-                    <GitHub sx={{ fontSize: 28 }} />
-                  </Link>
-                  <Link
-                    href="https://www.linkedin.com/in/koyiljon/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{ color: "#deeb4d", "&:hover": { color: "#fff" } }}
-                  >
-                    <LinkedIn sx={{ fontSize: 28 }} />
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com/koyiljon7/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{ color: "#deeb4d", "&:hover": { color: "#fff" } }}
-                  >
-                    <Instagram sx={{ fontSize: 28 }} />
-                  </Link>
-                </Box>
-              </Typography>
-            </Box>
-          </Box>
-          <Dithering
-            colorBack="#000000"
-            colorFront="#deeb4d"
-            shape="warp"
-            type="4x4"
-            size={2}
-            speed={0.5}
-            style={{
-              height: "340px",
-              width: "100%",
-              boxSizing: "border-box",
-              border: "1px solid #404040",
-            }}
-          />
-        </Box>
-      </Container>
-    </Box>
+          <GitHub sx={{ fontSize: 28 }} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/koyiljon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className="text-[#deeb4d] transition-colors hover:text-white"
+        >
+          <LinkedIn sx={{ fontSize: 28 }} />
+        </a>
+        <a
+          href="https://www.instagram.com/koyiljon7/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          className="text-[#deeb4d] transition-colors hover:text-white"
+        >
+          <Instagram sx={{ fontSize: 28 }} />
+        </a>
+      </div>
+    </LatticeBackground>
   );
 }
