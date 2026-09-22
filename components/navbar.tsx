@@ -1,13 +1,12 @@
 "use client";
 
-import { SquareTerminal } from "lucide-react";
+import { ArrowUpRight, SquareTerminal } from "lucide-react";
 
 const navItems = [
   { label: "ABOUT", href: "#about" },
   { label: "EXPERIENCE", href: "#experience" },
   { label: "PROJECTS", href: "#projects" },
   { label: "BLOGS", href: "#blog" },
-  { label: "SCALEWORKS", href: "#scaleworks" },
 ];
 
 const rightItems = [{ label: "CONTACT", href: "#contact" }];
@@ -25,12 +24,12 @@ export default function Navbar() {
           Koyiljon
         </a>
 
-        <ul className="mx-auto flex items-center justify-between">
+        <ul className="mx-auto flex  items-center justify-between">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                className="rounded-full px-4 py-2 text-[16px] text-[#e8e7da] transition-colors hover:text-[#f2f4f8]"
+                className="rounded-full px-4 py-2 text-base font-normal text-[#e8e7da] transition-colors hover:text-[#f2f4f8]"
               >
                 {item.label}
               </a>
@@ -39,6 +38,17 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden items-center md:flex px-10">
+<a
+            href="https://scaleworks.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-7 border-l border-[#262625] text-base font-normal text-[#e8e7da] transition-colors hover:text-[#f2f4f8]"
+          >
+            <span className="flex items-center gap-1.5">
+              SCALEWORKS
+              <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
+            </span>
+          </a>
           {rightItems.map((item) => (
             <a
               key={item.href}
@@ -49,6 +59,7 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
+
         </div>
 
         
