@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { SquareTerminal } from "lucide-react";
 
 const navItems = [
   { label: "ABOUT", href: "#about" },
@@ -19,8 +19,9 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-8xl items-center justify-between">
         <a
           href="#"
-          className="text-[32px] font-bold tracking-tight text-[#f2f4f8] border-r border-[#262625] px-10 py-4"
+          className="flex items-center gap-1 text-[32px] font-bold tracking-tight text-[#f2f4f8] border-r border-[#262625] px-10 py-4"
         >
+          <SquareTerminal className="h-10 w-10" strokeWidth={1.2} />
           Koyiljon
         </a>
 
