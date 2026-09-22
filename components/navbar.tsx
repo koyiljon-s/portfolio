@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { ArrowUpRight, SquareTerminal } from "lucide-react";
 
 const navItems = [
@@ -12,9 +13,11 @@ const navItems = [
 const rightItems = [{ label: "CONTACT", href: "#contact" }];
 
 export default function Navbar() {
+  const [blogOpen, setBlogOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-[#0a0a0a] backdrop-blur border-b border-[#262625]">
+    <>
+      <header className="fixed inset-x-0 top-0 z-50 bg-[#0a0a0a] backdrop-blur border-b border-[#262625]">
       <nav className="mx-auto flex max-w-8xl items-center justify-between">
         <a
           href="#"
@@ -29,6 +32,14 @@ export default function Navbar() {
             <li key={item.href}>
               <a
                 href={item.href}
+                onClick={
+                  item.label === "BLOGS"
+                    ? (e) => {
+                        e.preventDefault();
+                        setBlogOpen(true);
+                      }
+                    : undefined
+                }
                 className="rounded-full px-4 py-2 text-sm font-normal text-[#e8e7da] transition-colors hover:text-[#f2f4f8]"
               >
                 {item.label}
@@ -62,6 +73,35 @@ export default function Navbar() {
 
         </div>
       </nav>
-    </header>
+      </header>
+
+      {blogOpen && (
+        <div
+          className="fixed inset-0 z-60 flex items-center justify-center px-4 backdrop-blur-sm"
+          onClick={() => setBlogOpen(false)}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            className="w-full max-w-sm border border-[#262625] bg-transparent p-10 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="text-xl font-semibold text-[#f2f4f8] text-center">
+              Launching Soon
+            </h2>
+            <p className="mt-2 text-sm text-[#e8e7da]/70">
+              The blog is currently under construction. Stay tuned!
+            </p>
+            <button
+              type="button"
+              onClick={() => setBlogOpen(false)}
+              className="mt-6 w-full bg-[#6236f5] px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#4b27c2] focus:outline-none focus:ring-2 focus:ring-[#6236f5] focus:ring-offset-2"
+            >
+              GOT IT
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
