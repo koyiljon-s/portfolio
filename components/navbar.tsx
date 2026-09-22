@@ -24,12 +24,12 @@ export default function Navbar() {
           Koyiljon
         </a>
 
-        <ul className="mx-auto flex  items-center justify-between">
+        <ul className="mx-auto flex  items-center gap-12 justify-between">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                className="rounded-full px-4 py-2 text-base font-normal text-[#e8e7da] transition-colors hover:text-[#f2f4f8]"
+                className="rounded-full px-4 py-2 text-sm font-normal text-[#e8e7da] transition-colors hover:text-[#f2f4f8]"
               >
                 {item.label}
               </a>
@@ -37,12 +37,12 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center md:flex px-10">
-<a
+        <div className="hidden items-center md:flex pr-10">
+          <a
             href="https://scaleworks.tech"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-7 border-l border-[#262625] text-base font-normal text-[#e8e7da] transition-colors hover:text-[#f2f4f8]"
+            className="px-6 py-7 border-l border-[#262625] text-sm font-normal text-[#e8e7da] transition-colors hover:text-[#f2f4f8]"
           >
             <span className="flex items-center gap-1.5">
               SCALEWORKS
@@ -53,7 +53,7 @@ export default function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              className="py-7 px-8 border-t border-b border-l border-r border-l-[#ff0000] border-t-[#0000fa] border-r-[#00ff00] border-b-[#fbff00] text-[16px] text-[#0a0a0a] bg-[#e8e7da] font-medium
+              className="py-7 px-8 border-t border-b border-l border-r border-l-[#ff0000] border-t-[#0000fa] border-r-[#00ff00] border-b-[#fbff00] text-sm text-[#0a0a0a] bg-[#e8e7da] font-medium
               transition-colors hover:text-black"
             >
               {item.label}
@@ -61,11 +61,7 @@ export default function Navbar() {
           ))}
 
         </div>
-
-        
       </nav>
-
-      
     </header>
   );
 }
