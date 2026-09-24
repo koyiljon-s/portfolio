@@ -103,6 +103,9 @@ const WovenCanvas = () => {
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(mount.clientWidth, mount.clientHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.domElement.style.display = 'block';
+    renderer.domElement.style.width = '100%';
+    renderer.domElement.style.height = '100%';
     mount.appendChild(renderer.domElement);
 
     const mouse = new THREE.Vector2(0, 0);
@@ -205,7 +208,6 @@ const WovenCanvas = () => {
         }
         geometry.attributes.position.needsUpdate = true;
 
-        points.rotation.y = elapsedTime * 0.05;
         renderer.render(scene, camera);
     };
     animate();
@@ -214,13 +216,16 @@ const WovenCanvas = () => {
         camera.aspect = mount.clientWidth / mount.clientHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(mount.clientWidth, mount.clientHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
     };
     const resizeObserver = new ResizeObserver(handleResize);
     resizeObserver.observe(mount);
+    window.addEventListener('resize', handleResize);
 
     return () => {
         cancelAnimationFrame(frameId);
         resizeObserver.disconnect();
+        window.removeEventListener('resize', handleResize);
         mount.removeEventListener('mousemove', handleMouseMove);
         if (renderer.domElement.parentNode === mount) {
             mount.removeChild(renderer.domElement);
