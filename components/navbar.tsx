@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 bg-[#0a0a0a] backdrop-blur border-b border-[#262625]">
-      <nav className="mx-auto flex max-w-8xl items-center justify-between">
+      <nav className="mx-auto flex max-w-384 items-center justify-between">
         <a
           href="#"
           className="flex items-center gap-1 text-[32px] font-bold tracking-tight text-[#f2f4f8] border-r border-[#262625] px-10 py-4"
@@ -83,13 +83,13 @@ export default function Navbar() {
           <div
             role="dialog"
             aria-modal="true"
-            className="w-full max-w-sm border border-[#262625] bg-transparent p-10 shadow-2xl"
+            className="w-full max-w-sm border border-[#262625] p-10 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-xl font-semibold text-[#f2f4f8] text-center">
               Launching Soon
             </h2>
-            <p className="mt-2 text-sm text-[#e8e7da]/70">
+            <p className="mt-2 text-sm font-medium text-[b0afa5]">
               The blog is currently under construction. Stay tuned!
             </p>
             <button

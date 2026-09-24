@@ -98,10 +98,10 @@ const WovenCanvas = () => {
     if (!mount) return;
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(75, mount.clientWidth / mount.clientHeight, 0.1, 1000);
     camera.position.z = 5;
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(mount.clientWidth, mount.clientHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     mount.appendChild(renderer.domElement);
 
@@ -158,10 +158,11 @@ const WovenCanvas = () => {
     scene.add(points);
 
     const handleMouseMove = (event: MouseEvent) => {
-        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-        mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        const rect = mount.getBoundingClientRect();
+        mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
     };
-    window.addEventListener('mousemove', handleMouseMove);
+    mount.addEventListener('mousemove', handleMouseMove);
 
     let frameId = 0;
     const animate = () => {
@@ -210,16 +211,17 @@ const WovenCanvas = () => {
     animate();
 
     const handleResize = () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.aspect = mount.clientWidth / mount.clientHeight;
         camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setSize(mount.clientWidth, mount.clientHeight);
     };
-    window.addEventListener('resize', handleResize);
+    const resizeObserver = new ResizeObserver(handleResize);
+    resizeObserver.observe(mount);
 
     return () => {
         cancelAnimationFrame(frameId);
-        window.removeEventListener('resize', handleResize);
-        window.removeEventListener('mousemove', handleMouseMove);
+        resizeObserver.disconnect();
+        mount.removeEventListener('mousemove', handleMouseMove);
         if (renderer.domElement.parentNode === mount) {
             mount.removeChild(renderer.domElement);
         }
