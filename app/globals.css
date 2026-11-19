@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #ffffff;
+  --foreground: #0a0a0a;
 }
 
 @theme inline {
@@ -12,22 +12,9 @@
   --font-mono: var(--font-inter), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #000000;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-weight: 200;
   font-family: var(--font-inter), sans-serif;
-}
-
-@media (max-width: 640px) {
-  .airlock-video {
-    object-position: center center;
-  }
 }
