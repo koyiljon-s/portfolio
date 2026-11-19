@@ -1,9 +1,12 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Navbar />
-    </main>
+      <main className="flex-1" />
+      <Footer />
+    </div>
   );
 }
