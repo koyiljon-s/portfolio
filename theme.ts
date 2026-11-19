@@ -5,9 +5,9 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   cssVariables: true,
   typography: {
-    fontFamily: "var(--font-inter), sans-serif",
-    fontWeightLight: 200,
-    fontWeightRegular: 200,
+    fontFamily: "var(--font-satoshi), sans-serif",
+    fontWeightLight: 300,
+    fontWeightRegular: 300,
     fontWeightMedium: 500,
     fontWeightBold: 700,
   },
