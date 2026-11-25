@@ -23,9 +23,16 @@ const satoshi = localFont({
   display: "swap",
 });
 
+const title = "Koyiljon's I/O";
+const description = "Koyiljon Sultonaliev, a software engineer building AI products from screen to server.";
+
+// The preview image comes from app/opengraph-image.png.
 export const metadata: Metadata = {
-  title: "Koyiljon's I/O",
-  description: "Koyiljon Sultonaliev, a software engineer building AI products from screen to server.",
+  metadataBase: new URL("https://koyiljon.com"),
+  title,
+  description,
+  openGraph: { title, description, url: "/", siteName: title, type: "website" },
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = {
