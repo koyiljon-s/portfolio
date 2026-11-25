@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
@@ -25,7 +25,11 @@ const satoshi = localFont({
 
 export const metadata: Metadata = {
   title: "Koyiljon's I/O",
-  description: "Hey there! I am Koyiljon, a software engineer",
+  description: "Koyiljon Sultonaliev, a software engineer building AI products from screen to server.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#011421",
 };
 
 export default function RootLayout({
